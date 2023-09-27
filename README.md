@@ -7,9 +7,9 @@ The general format:
 
 **MAJOR.MINOR.PATCH**, eg. `1.0.1` 
 
--**MAJOR** version when you make incompatible API changes
--**MINOR** version when you make functionality changes in a backward compatible manner
--**PATCH** versions when you make backward compatible fixes
+- **MAJOR** version when you make incompatible API changes
+- **MINOR** version when you make functionality changes in a backward compatible manner
+- **PATCH** versions when you make backward compatible fixes
 
 ### Considerations for Linux Distro
 
