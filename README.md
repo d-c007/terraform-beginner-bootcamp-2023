@@ -172,6 +172,10 @@ If you lose this file, you lose knowing the state of your infrastructure.
 ### Terraform Directory
 
 `.terraform` directory contains binaries of terraform providers. 
+
+### Terraform Cloud Login
+
+When running `terraform login` it will generate a hyperlink click the hyperlink. This will show you your token that you will need to login. Input your token at the prompt click enter. You are now logged in. 
 ### References
 
 https://quickref.me/chmod.html
