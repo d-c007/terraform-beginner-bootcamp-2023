@@ -75,11 +75,11 @@ HELLO=`world`
 echo  $HELLO
 ```
 
-## Printing Vars
+### Printing Vars
 
 We can print an en var using echo eg. `echo $HELLO`
 
-## Scoping of Env Vars 
+### Scoping of Env Vars 
 
 When you open up new bash terminals in VSCode it will not be aware of env vars that you have set in another window
 
@@ -117,14 +117,14 @@ If it is succesful you should see a json payload return that loos like this:
 ```
 [AWS CLI env vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 
-## Terraform Registry 
+### Terraform Registry 
 
 Terraform sources their providers and modules from the Terraform registery which is located at [registery.teraform.io] (https://registry.terraform.io/) 
 
 - **Terraform providers** - is an interface to APIs that will allow you to create resources in terraform. (https://registry.terraform.io/browse/providers)
 - **Terraform modules** - are a way to make large amount of teraform code modular, portable, and re-usable. (https://registry.terraform.io/browse/modules) 
 
-## Terraform Console
+### Terraform Console
 
 We can see a list of all the Terraform commans by simply typing `terraform`
 
@@ -148,6 +148,14 @@ This will run a plan and pass the changes to be executed by terraform. Apply sho
 
 If we want to automatically approve an apply we can provide the `terraform apply --auto approve` flag
 
+### Terraform Destroy 
+
+`terraform destroy`
+
+This will destroy resources.
+
+You can also use the `auto approve` flag to skip the approve prompt 
+ 
 ### Terraform Lock Files
 `terraform.lock.hcl` contains the locked versioning for the providers or modules that should be used with this project 
 
