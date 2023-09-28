@@ -117,7 +117,53 @@ If it is succesful you should see a json payload return that loos like this:
 ```
 [AWS CLI env vars](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 
+## Terraform Registry 
 
+Terraform sources their providers and modules from the Terraform registery which is located at [registery.teraform.io] (https://registry.terraform.io/) 
+
+- **Terraform providers** - is an interface to APIs that will allow you to create resources in terraform. (https://registry.terraform.io/browse/providers)
+- **Terraform modules** - are a way to make large amount of teraform code modular, portable, and re-usable. (https://registry.terraform.io/browse/modules) 
+
+## Terraform Console
+
+We can see a list of all the Terraform commans by simply typing `terraform`
+
+### Terraform Init
+
+At the start of a new terraform project we will run `terraform init` to download binaries for terraform providers that we'll use in this project 
+
+### Terraform Plan
+
+`terraform plan`
+
+This will generate out a changeset, about the state of our infrastructure and what will be changed.
+
+We can output this change ie. "plan" to be passed to an apply, but often you can just ignore output
+
+### Terraform Apply
+
+`terraform apply`
+
+This will run a plan and pass the changes to be executed by terraform. Apply should prompt yes or no.
+
+If we want to automatically approve an apply we can provide the `terraform apply --auto approve` flag
+
+### Terraform Lock Files
+`terraform.lock.hcl` contains the locked versioning for the providers or modules that should be used with this project 
+
+The Terraform Lock File **should be committed** to your VCS eg. Github
+
+### Terraform State Files
+
+`terraform.tfstate` contains information about the current state of your infrastructure
+This file **should not be committed** to your VCS. This file can contain sensitive data 
+
+If you lose this file, you lose knowing the state of your infrastructure. 
+`terraform.tfstate.backup` is the previous state file state
+
+### Terraform Directory
+
+`.terraform` directory contains binaries of terraform providers. 
 ### References
 
 https://quickref.me/chmod.html
