@@ -176,6 +176,13 @@ If you lose this file, you lose knowing the state of your infrastructure.
 ### Terraform Cloud Login
 
 When running `terraform login` it will generate a hyperlink click the hyperlink. This will show you your token that you will need to login. Input your token at the prompt click enter. You are now logged in. 
+
+### Terraform tfrc Credentials bash script
+
+Added a bash script to generate tfrc credentials this helps us automate our credentials.
+
+You can find that bash script in `./bin/generate_tfrc_creds` (bin/generate_tfrc_creds)
+
 ### References
 
 https://quickref.me/chmod.html
