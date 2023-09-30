@@ -2,6 +2,7 @@
 
 ## Weekly Journals
 
+- [Week 0 jounral](journal/week0.md)
 
 ## References
 - https://semver.org
