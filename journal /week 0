@@ -22,7 +22,6 @@
 - [Terraform Directory](#terraform-directory)
 - [Terraform Cloud Login](#terraform-cloud-login)
 - [Terraform tfrc Credentials bash script](#terraform-tfrc-credentials-bash-script)
-- [References](#references)
 
 
 ##Semantic Versioning 
@@ -205,9 +204,5 @@ Added a bash script to generate tfrc credentials this helps us automate our cred
 
 You can find that bash script in `./bin/generate_tfrc_creds` (bin/generate_tfrc_creds)
 
-### References
 
-https://quickref.me/chmod.html
-https://www.gitpod.io/docs/configure/workspaces/tasks
-https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
