@@ -1,6 +1,6 @@
 # Terraform Beginner Bootcamp 2023 - Week 0
 
-##Table of Contents
+### Table of Contents
 
 - [Considerations for Linux Distro](#considerations-for-linux-distro)
 - [Install the Terraform CLI](#install-the-terraform-cli)
@@ -24,7 +24,7 @@
 - [Terraform tfrc Credentials bash script](#terraform-tfrc-credentials-bash-script)
 
 
-##Semantic Versioning 
+### Semantic Versioning 
 
 **MAJOR.MINOR.PATCH**, eg. `1.0.1` 
 
