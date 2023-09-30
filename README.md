@@ -4,7 +4,8 @@
 
 ## Weekly Journals
 
-- [Week 0 journal](journal/week0.md) 
+- [Week 0 journal](journal/week0.md)
+- [Week 0 journal](journal/week1.md) 
 
 ## References
 - https://semver.org
