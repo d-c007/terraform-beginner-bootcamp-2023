@@ -48,3 +48,17 @@ This is the default file to load in terraform variables in blank
 ### Order of terraform variables 
 
 - TODO: Document which terrafrom variables take precedence. 
+
+### Terraform Import 
+[Terraform Import](https://developer.hashicorp.com/terraform/cli/import)
+
+### Dealing with Configuration Drift
+
+
+### Fix manual configuration
+
+### fIX manual configuration
+
+If someone goes and deletes or modifies cloud resources manually through ClickOps. 
+
+If we run `terraform plan`it will attempt to put our infr back into the expected state fixing configuration drift
