@@ -62,3 +62,37 @@ This is the default file to load in terraform variables in blank
 If someone goes and deletes or modifies cloud resources manually through ClickOps. 
 
 If we run `terraform plan`it will attempt to put our infr back into the expected state fixing configuration drift
+
+### Terraform Modules
+
+### Terraform Module Structure
+
+It is recommended to place modules in a `modules` directory when locally developing modules but you can name it whatever you want. 
+
+### Passing Input Variables 
+We can pass input variables to our modules to our module
+
+The module has to declare the terraform variables in its own variables.tf
+
+``` tf
+module "terrahouse" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+  }
+```
+
+### Modules Sources
+
+Using the source we can import the module from various places eg: 
+- locally
+- github 
+- TF Registry
+
+``` tf
+module "terrahouse" {
+  source = "./modules/terrahouse_aws"
+  }
+```
+
+[Terraform Module Source] (https://developer.hashicorp.com/terraform/language/modules/sources)
