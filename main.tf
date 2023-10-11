@@ -1,7 +1,8 @@
 terraform {
-  #  backend "remote" {
+  #backend "remote" {
   #  hostname = "app.terraform.io"
   #  organization = "ExamPro"
+
   #  workspaces {
   #    name = "terra-house-1"
   #  }
@@ -14,11 +15,10 @@ terraform {
   #}
 
 }
-resource "aws_s3_bucket" "terraform-beginner-bootcamp" {
-}
 
 module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+  source = "./modules/terrahouse_aws" 
+  assets_path = var.assets_path
   user_uuid = var.user_uuid
   bucket_name = var.bucket_name
   index_html_filepath = var.index_html_filepath
