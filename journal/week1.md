@@ -35,10 +35,6 @@ We can set Terraform Cloud variables to be sensitive so that are committed publi
 
 We can use the `-var` flag to set an input variable or override a variable in the tfvars file eg. `terraform -var user_ud="my-user_id"`
 
-### var-file flag 
-
--TODO: Document this flag
-
 ### terraform.tfvars
 
 This is the default file to load in terraform variables in blank
@@ -47,7 +43,17 @@ This is the default file to load in terraform variables in blank
 
 ### Order of terraform variables 
 
-- TODO: Document which terrafrom variables take precedence. 
+Input variables let you customize aspects of Terraform modules without altering the module's own source code. This functionality allows you to share modules across different Terraform configurations, making your module composable and reusable.
+
+When you declare variables in the root module of your configuration, you can set their values using CLI options and environment variables. When you declare them in child modules, the calling module should pass values in the module block.
+
+If you're familiar with traditional programming languages, it can be useful to compare Terraform modules to function definitions:
+
+- Input variables are like function arguments.
+- Output values are like function return values.
+- Local values are like a function's temporary local variables.
+
+[Terraform Variables](https://developer.hashicorp.com/terraform/language/values/variables)
 
 ### Terraform Import 
 [Terraform Import](https://developer.hashicorp.com/terraform/cli/import)
@@ -55,7 +61,6 @@ This is the default file to load in terraform variables in blank
 ### Dealing with Configuration Drift
 
 
-### Fix manual configuration
 
 ### fIX manual configuration
 
@@ -219,4 +224,17 @@ resource "aws_instance" "web" {
   }
 } 
 ```
+
 [Terraform Remote Exec Provisioner](https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec)
+
+## For Each Expressions
+
+For each allows us to enumerate over complex data types
+
+```sh
+[for s in var.list : upper(s)]
+```
+
+This is mostly useful when you are creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code.
+
+[For Each Expressions](https://developer.hashicorp.com/terraform/language/expressions/for)
