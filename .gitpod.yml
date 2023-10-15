@@ -25,6 +25,10 @@ tasks:
       npm install --global http-server
     command: 
       http-server
-ions:
+
+vscode:
+  extensions:
     - amazonwebservices.aws-toolkit-vscode
     - hashicorp.terraform
+    - phil294.git-log--graph
+    - mhutchie.git-graph
