@@ -40,14 +40,11 @@ provider "terratowns" {
 resource "terratowns_home" "home" {
   name = "Dune"
   description = <<DESCRIPTION
-resource "terratowns_home" "home" {
-  name = "Dune"
-  description = <<DESCRIPTION
-"Dune" is a visually stunning and epic science fiction film, directed by Denis Villeneuve and released in 2021. 
-It's based on the classic novel of the same name by Frank Herbert. The story takes place on the desert planet of Arrakis, the only source of a valuable spice called "melange." The film follows the journey of Paul Atreides, a young noble, as he becomes embroiled in a complex power struggle for control of Arrakis and its resources. With a star-studded cast, including Timothée Chalamet and Zendaya, "Dune" combines intricate world-building with themes of politics, religion, and destiny, resulting in a highly acclaimed and visually spectacular cinematic experience.
-DESCRIPTION
+  Dune is a visually stunning and epic science fiction film, directed by Denis Villeneuve and released in 2021. 
+  It's based on the classic novel of the same name by Frank Herbert. The story takes place on the desert planet of Arrakis, the only source of a valuable spice called "melange." The film follows the journey of Paul Atreides, a young noble, as he becomes embroiled in a complex power struggle for control of Arrakis and its resources. With a star-studded cast, including Timothée Chalamet and Zendaya, "Dune" combines intricate world-building with themes of politics, religion, and destiny, resulting in a highly acclaimed and visually spectacular cinematic experience.
+  DESCRIPTION
   #domain_name = module.terrahouse_aws.cloudfront_url
   domain_name = "3fdq3gz.cloudfront.net"
-  town = "movies"
+  town = "video-valley"
   content_version = 1
 }
